@@ -6,8 +6,17 @@ body {
  font-family: 'Roboto', sans-serif;
  font-weight: 400;
  height: 100vh;
+
  background:plum;
  background-image: linear-gradient(131deg, palegoldenrod, plum);
+
+}
+.main-container {
+    background-image: url("../images/banner.jpg");
+    background-size: cover; 
+  
+   background-repeat: no-repeat;
+    /* background-position: 50%; */
 }
 
 #footer {
@@ -129,7 +138,8 @@ nav ul li{
     color:black;
 }
 .main-container {
-    min-height: 80vh;
+    /* min-height: 80vh; */
+    min-height: 161vh;
 }
 
 
@@ -669,7 +679,8 @@ address a:hover {
 /* Style the header with a grey background and some padding */
 .header {
     overflow: hidden;
-    background-color: #f1f1f1;
+    /* background-color: #f1f1f1; */
+    background-color: transparent;
     padding: 20px 10px;
   }
   
@@ -774,4 +785,7 @@ address a:hover {
     width: 770px;
     padding-top: 55px;
     margin: auto;
+}
+.logo img {
+    width: 109px;
 }
