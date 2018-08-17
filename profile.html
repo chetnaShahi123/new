@@ -9,57 +9,26 @@
  <title>SIKSUK SOLUTIONS | OFFERS A GREAT SUCCESS</title>
  <link rel="stylesheet" type="text/css" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" />
  <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css" />
- <link rel="stylesheet" type="text/css" href="assets/css/nice-select.css" />
- <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+ <!-- <link rel="stylesheet" type="text/css" href="assets/css/nice-select.css" />-->
+ <link rel="stylesheet" type="text/css" href="assets/css/my_style.css" /> 
  <link rel="stylesheet" type="text/css" href="assets/css/responsive.css" />
 </head>
-
+<style>
+    .mySlides {display:none;}
+    </style>
 <body>
  <div class="container-fluid">
-  <header class="col-md-12">
-   <!--Header section-->
-   <a class="mobile-nav"><span></span><span></span><span></span><span></span></a>
-   <a class="col-md-2 logo-inner" href="javascript:void(0);" title="Siksuk"><img src="assets/images/logo.png" alt="SIKSUK" title="SIKSUK" /></a>
-   <div class="col-md-2 notification-col">
-    <a class="search-link" href="javascript:void(0);" title="Search"><img src="assets/images/search.svg" alt="Search" title="Search" /></a>
-    <ul>
-     <li>
-      <a href="javascript:void(0);" title="Message"><img src="assets/images/messages.svg" alt="Message" title="Message" /></a>
-     </li>
-     <li>
-      <a href="javascript:void(0);" title="Setting"><img src="assets/images/setting.svg" alt="Setting" title="Setting" /></a>
-     </li>
-     <li>
-      <a href="javascript:void(0);" title="Notification"><img src="assets/images/notification.svg" alt="Notification" title="Notification" /><span class="count">4</span></a>
-     </li>
-     <li>
-      <a href="javascript:void(0);" title="User"><img src="assets/images/user.svg" alt="User" title="User" /></a>
-     </li>
-    </ul>
-   </div>
-  </header>
-  <section class="col-md-12 content-col">
-   <!--Content Section-->
-   <div class="content-inner">
-    <aside class="left-nav">
-     <!--Left Navigation-->
-     <div class="left-nav-inner">
-      <ul>
-       <li class="dashboard"><a href="javascript:void(0);" title="Dashboard">Dashboard</a></li>
-       <li class="profile active"><a href="javascript:void(0);" title="My Profile">My Profile</a></li>
-       <li class="scheduled"><a href="javascript:void(0);" title="Scheduled Visits">Scheduled Visits</a></li>
-       <li class="applications"><a href="javascript:void(0);" title="Applications">Applications</a></li>
-       <li class="tenancies"><a href="javascript:void(0);" title="My Tenancies">My Tenancies</a></li>
-       <li class="maintenance"><a href="javascript:void(0);" title="Maintenance">Maintenance</a></li>
-      </ul>
-     </div>
-    </aside>
-    <div class="right-fluid">
-     <!--Right Section-->
-     </div>
-   </div>
-   <footer class="col-md-12 footer-inner">&copy; Copyright 2018 -siksuk.com. All rights reserved</footer>
-  </section>
+  <!--  -->
+  <!-- <h2 class="w3-center">Automatic Slideshow</h2> -->
+  <!-- style="max-width:500px" -->
+  <div class="centered">
+   <a href='my.html'>Novaillum Solutions Welcomes you</a>
+  </div>
+<div class="base_image" >
+  <img class="mySlides" src="assets/images/gallery1.jpg" style="width:100%">
+  <img class="mySlides" src="assets/images/gallery2.jpg" style="width:100%">
+  <img class="mySlides" src="assets/images/gallery3.jpg" style="width:100%">
+</div>
  </div>
  
  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -67,7 +36,23 @@
  <script src="assets/js/jquery.nice-select.min.js"></script>
  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.16.0/jquery.validate.min.js"></script>
  <script src="assets/js/bootstrap.min.js"></script>
- <script src="assets/js/function.js"></script>
+ <!-- <script src="assets/js/function.js"></script> -->
+ <script>
+   var myIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";  
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}    
+    x[myIndex-1].style.display = "block";  
+    setTimeout(carousel, 2000); // Change image every 2 seconds
+}
+   </script>
 </body>
 
 </html>
